@@ -1,0 +1,65 @@
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  flex-grow: 1;
+}
+
+.section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: #FFFFFF;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #B0E0E6; /* Light aquamarine border */
+}
+
+.section h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00CED1; /* Primary aquamarine */
+  margin-bottom: 1rem;
+}
+
+.section ul {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+}
+
+.section li {
+  margin-bottom: 0.5rem;
+}
+
+.project-card {
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #00CED1;
+}
+
+.project-card p {
+  margin: 0.5rem 0;
+}
+
+.project-card a {
+  color: #B0E0E6; /* Light aquamarine */
+  text-decoration: none;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
