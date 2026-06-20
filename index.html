@@ -1,16 +1,328 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Personal portfolio of Tejas S, showcasing backend development, cloud-native applications, and AI/ML projects on Kaggle." />
-    <meta property="og:title" content="Tejas S - Portfolio" />
-    <meta property="og:description" content="Explore my projects in backend, cloud, and AI/ML, including Twitter Sentiment Analysis and AI Dungeon Master." />
-    <meta property="og:type" content="website" />
-    <title>Tejas S - Portfolio</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tejas S. — AI & Software Engineer</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="#hero" class="nav-logo">TS.</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <p class="hero-eyebrow">Building systems that think.</p>
+        <h1 class="hero-name">Tejas S.</h1>
+        <p class="hero-role">AI / Deep Learning &nbsp;·&nbsp; Full-Stack &nbsp;·&nbsp; UVCE Bangalore</p>
+        <p class="hero-bio">
+          Final-year CSE student with a 8.63 CGPA, incoming Framework Engineering intern at Quantiphi (July 2026).
+          I work at the intersection of neural networks and scalable software — from training object-detection models 
+          to shipping full-stack apps.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="assets/Tejas_Resume.pdf" class="btn btn-ghost" target="_blank">Resume ↗</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="terminal">
+          <div class="terminal-bar">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="terminal-title">tejas@uvce ~ %</span>
+          </div>
+          <div class="terminal-body" id="terminal-body">
+            <span class="t-prompt">$ </span><span class="t-cmd" id="typed-cmd"></span><span class="cursor">▍</span>
+            <div id="terminal-output"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about" id="about">
+    <div class="container">
+      <p class="section-label">/ about</p>
+      <div class="about-grid">
+        <div class="about-left">
+          <h2 class="section-title">Built from first principles.</h2>
+          <p>
+            I'm a Computer Science student at UVCE Bangalore who doesn't stop at "it works." 
+            I trace every idea back to its foundation — why this algorithm, why this architecture, 
+            why this data structure — and build from there.
+          </p>
+          <p>
+            My deep interest is in AI systems: training models, understanding attention mechanisms, 
+            and pushing the limits of what PyTorch can do on a Colab GPU. Alongside that, I've built 
+            full-stack apps using the MERN stack, competed in hackathons (Vultr, Smart India Hackathon), 
+            and practised DSA on Codeforces with a preference for analytical derivations over brute force.
+          </p>
+          <p>
+            Starting July 2026, I join <strong>Quantiphi</strong> as a Framework Engineering Intern, 
+            with a full-time conversion confirmed for January 2027.
+          </p>
+        </div>
+        <div class="about-right">
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-num">8.63</span>
+              <span class="stat-label">CGPA at UVCE</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">87.3%</span>
+              <span class="stat-label">Sent-X Accuracy</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">10K</span>
+              <span class="stat-label">Companies Scraped</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">2026</span>
+              <span class="stat-label">Quantiphi Internship</span>
+            </div>
+          </div>
+          <div class="education-card">
+            <p class="edu-label">Education</p>
+            <p class="edu-degree">B.Tech, Computer Science & Engineering</p>
+            <p class="edu-college">University Visvesvaraya College of Engineering</p>
+            <p class="edu-year">Bangalore · 2022 – 2026</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <p class="section-label">/ projects</p>
+      <h2 class="section-title">Things I've built.</h2>
+      <div class="projects-grid">
+
+        <article class="project-card featured">
+          <div class="project-meta">
+            <span class="project-tag">NLP · ML</span>
+            <span class="project-year">2024</span>
+          </div>
+          <h3 class="project-title">Sent-X</h3>
+          <p class="project-desc">
+            A context-aware, explainable sentiment analysis framework using TF-IDF + Logistic Regression 
+            with a Streamlit UI. Trained on 2,500 tweets, achieving 87.3% accuracy. Presented as final-year research project.
+          </p>
+          <div class="project-stack">
+            <span>Python</span><span>Scikit-learn</span><span>TF-IDF</span><span>Streamlit</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/tejas004s" class="proj-link" target="_blank">GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta">
+            <span class="project-tag">Computer Vision</span>
+            <span class="project-year">2024</span>
+          </div>
+          <h3 class="project-title">Traffic Object Detection</h3>
+          <p class="project-desc">
+            Built for the Vultr Hackathon — AIML-powered traffic control using real-time object 
+            detection and instance segmentation on live camera feeds.
+          </p>
+          <div class="project-stack">
+            <span>PyTorch</span><span>Object Detection</span><span>Vultr Cloud</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/tejas004s" class="proj-link" target="_blank">GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta">
+            <span class="project-tag">Full-Stack</span>
+            <span class="project-year">2024</span>
+          </div>
+          <h3 class="project-title">MERN + Vite App</h3>
+          <p class="project-desc">
+            A full-stack web application using MongoDB Atlas, Express, React (Vite), and Node.js 
+            with a recommendation system. JavaScript-only, clean architecture, no bloat.
+          </p>
+          <div class="project-stack">
+            <span>MongoDB Atlas</span><span>Express</span><span>React</span><span>Node.js</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/tejas004s" class="proj-link" target="_blank">GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta">
+            <span class="project-tag">Automation · NLP</span>
+            <span class="project-year">2024</span>
+          </div>
+          <h3 class="project-title">Founder Name Scraping Pipeline</h3>
+          <p class="project-desc">
+            Large-scale pipeline that extracts founder names from a 10,000-company CSV using 
+            Google Search, LinkedIn, and Wikipedia. Multi-processed with batching and smart NLP disambiguation.
+          </p>
+          <div class="project-stack">
+            <span>Selenium</span><span>BeautifulSoup</span><span>spaCy</span><span>Multiprocessing</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/tejas004s" class="proj-link" target="_blank">GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta">
+            <span class="project-tag">Deep Learning</span>
+            <span class="project-year">2023</span>
+          </div>
+          <h3 class="project-title">Character-Level Language Model</h3>
+          <p class="project-desc">
+            Implemented a character-level language model from scratch in PyTorch — understanding 
+            sequence modelling, embeddings, and autoregressive generation from first principles.
+          </p>
+          <div class="project-stack">
+            <span>PyTorch</span><span>Python</span><span>Google Colab</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/tejas004s" class="proj-link" target="_blank">GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta">
+            <span class="project-tag">Healthcare · Dash</span>
+            <span class="project-year">2023</span>
+          </div>
+          <h3 class="project-title">Hospital Management Apps</h3>
+          <p class="project-desc">
+            Two apps: a patient & bed availability tracker, and a medicine counter UI built in Dash. 
+            Focused on real-world usability and clean inventory management logic.
+          </p>
+          <div class="project-stack">
+            <span>Python</span><span>Dash</span><span>Pandas</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/tejas004s" class="proj-link" target="_blank">GitHub ↗</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <p class="section-label">/ skills</p>
+      <h2 class="section-title">Tools of the trade.</h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <p class="skill-group-label">AI / ML</p>
+          <div class="skill-tags">
+            <span>PyTorch</span>
+            <span>Scikit-learn</span>
+            <span>Object Detection</span>
+            <span>Instance Segmentation</span>
+            <span>NLP</span>
+            <span>TF-IDF</span>
+            <span>Tacotron2</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <p class="skill-group-label">Backend & Systems</p>
+          <div class="skill-tags">
+            <span>Node.js</span>
+            <span>Express</span>
+            <span>Python</span>
+            <span>C++</span>
+            <span>Docker</span>
+            <span>SQL</span>
+            <span>MongoDB Atlas</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <p class="skill-group-label">Frontend</p>
+          <div class="skill-tags">
+            <span>React</span>
+            <span>Vite</span>
+            <span>Streamlit</span>
+            <span>Dash</span>
+            <span>JavaScript</span>
+            <span>HTML / CSS</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <p class="skill-group-label">Data & Tools</p>
+          <div class="skill-tags">
+            <span>Pandas</span>
+            <span>NumPy</span>
+            <span>Selenium</span>
+            <span>BeautifulSoup</span>
+            <span>spaCy</span>
+            <span>Git</span>
+            <span>Google Colab</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <p class="section-label">/ contact</p>
+      <h2 class="section-title">Let's connect.</h2>
+      <p class="contact-sub">
+        I'm open to internships, research collaborations, and interesting problems in AI and full-stack engineering.
+      </p>
+      <div class="contact-links">
+        <a href="mailto:tejashowda004@gmail.com" class="contact-item">
+          <span class="contact-icon">✉</span>
+          <span>tejashowda004@gmail.com</span>
+        </a>
+        <a href="https://github.com/tejas004s" class="contact-item" target="_blank">
+          <span class="contact-icon">⌥</span>
+          <span>github.com/tejas004s</span>
+        </a>
+        <a href="tel:+919008923966" class="contact-item">
+          <span class="contact-icon">☏</span>
+          <span>+91 90089 23966</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Tejas S. · UVCE Bangalore · 2026</p>
+    <p class="footer-sub">Built with HTML, CSS, and first principles.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
 </html>
